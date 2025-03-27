@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure & Smart Storage Solutions</title>
+    <link rel="stylesheet" href="/static/css/Home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+    <div class="animation_wrapper">
+      <div class="upper-curtain"></div>
+      <div class="animation_container">
+        <div class="animation_content">
+          <h1 class="animation_title">
+            <div class="animation_line">
+              <span class="animation_char">S</span>
+              <span class="animation_char">e</span>
+              <span class="animation_char">c</span>
+              <span class="animation_char">u</span>
+              <span class="animation_char">r</span>
+              <span class="animation_char">e</span>
+              <!-- <span class="animation_char">&nbsp;</span> -->
+              <!-- <span class="animation_char">&</span>
+              <span class="animation_char">&nbsp;</span> -->
+            </div>
+            <div class="animation_line">
+              <span class="animation_char">S</span>
+              <span class="animation_char">m</span>
+              <span class="animation_char">a</span>
+              <span class="animation_char">r</span>
+              <span class="animation_char">t</span>
+            </div>
+            <div class="animation_line">
+              <span class="animation_char">S</span>
+              <span class="animation_char">t</span>
+              <span class="animation_char">o</span>
+              <span class="animation_char">r</span>
+              <span class="animation_char">a</span>
+              <span class="animation_char">g</span>
+              <span class="animation_char">e</span>
+              <!-- <span class="animation_char">&nbsp;</span>
+              <span class="animation_char">S</span>
+              <span class="animation_char">o</span>
+              <span class="animation_char">l</span>
+              <span class="animation_char">u</span>
+              <span class="animation_char">t</span>
+              <span class="animation_char">i</span>
+              <span class="animation_char">o</span>
+              <span class="animation_char">n</span>
+              <span class="animation_char">s</span> -->
+            </div>
+          </h1>
+        <div class="animation_button_container">
+            <a href="{{url_for('home1')}}" class="animation_button">Learn More</a>
+          </div
+        </div>
+      </div>
+      <div class="lower-curtain"></div>
+    </div>
+    </div>
+    </div>
+   
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+ 
+ const words = document.querySelectorAll(".animation_line");
+ const animationBtn = document.querySelector(".animation_button");
+
+ function startAnimation() {
+     // Start background transition
+     setTimeout(() => {
+         document.querySelector('.upper-curtain').classList.add("animate");
+         document.querySelector('.lower-curtain').classList.add("animate");
+     }, 500);
+ 
+     let totalDelay = 900; // Initial delay for the first word
+ 
+     words.forEach((word, wordIndex) => {
+         let chars = word.querySelectorAll('.animation_char');
+ 
+         chars.forEach((char, index) => {
+             setTimeout(() => {
+                 char.classList.add('visible');
+             }, totalDelay + (index * 75));
+         });
+ 
+        
+         const wordAppearTime = totalDelay + (chars.length * 75);
+         const stayTime = 700; 
+ 
+         
+         chars.forEach((char, index) => {
+             setTimeout(() => {
+                 char.classList.add('invisible');
+             }, wordAppearTime + stayTime + ((chars.length - 1 - index) * 75)); 
+         });
+         
+ 
+         
+         totalDelay = wordAppearTime + stayTime + (chars.length * 75);
+     });
+ }
+ 
+ // Start the animation
+ startAnimation();
+
+setTimeout(()=>animationBtn.click(),6500)
+ 
+ 
+ // Add replay animation functionality (for development/testing)
+ document.querySelector('.animation_container').addEventListener('dblclick', function() {
+     // Reset all animations
+     wrapper.classList.remove('animate');
+     chars.forEach(char => {
+         char.classList.remove('visible');
+     });
+     buttonContainer.classList.remove('visible');
+     
+     // Force reflow
+     void wrapper.offsetWidth;
+     
+     // Restart animation after a short delay
+     setTimeout(startAnimation, 300);
+ });
+});
+
+
+
+    </script>
+    <script src="/static/js/Script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="storage-navbar">
+      <div class="storage-navbar__container">
+        <div class="storage-navbar__logo">
+          <!-- Logo added here -->
+          <a href="/">
+            <img
+              src="/static/Images/Image 1 (1).png"
+              alt="Storage Logo"
+              class="logo-image"
+            />
+          </a>
+        </div>
+
+        <div class="storage-navbar__menu">
+          <div class="storage-navbar__menu-item storage-navbar__dropdown">
+            <span>Storage Types</span>
+            <svg
+              class="storage-navbar__dropdown-icon"
+              width="10"
+              height="6"
+              viewBox="0 0 10 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <!-- Dropdown Menu -->
+            <div class="storage-navbar__dropdown-content">
+              <div class="storage-navbar__dropdown-column">
+                <a href="/self-storage" class="storage-navbar__dropdown-link"
+                  >Self Storage</a
+                >
+                <a
+                  href="/corporate-storage"
+                  class="storage-navbar__dropdown-link"
+                  >Corporate Storage</a
+                >
+                <a href="/business" class="storage-navbar__dropdown-link"
+                  >Business Storage</a
+                >
+              </div>
+              <div class="storage-navbar__dropdown-column">
+                <a
+                  href="/warehouse-storage"
+                  class="storage-navbar__dropdown-link"
+                  >Warehousing</a
+                >
+                <a href="/3pl-storage" class="storage-navbar__dropdown-link"
+                  >3PL Storage</a
+                >
+                <a href="/vehicle-storage" class="storage-navbar__dropdown-link"
+                  >Vehicle Storage</a
+                >
+              </div>
+              <div class="storage-navbar__dropdown-column">
+                <a
+                  href="/enterprise-storage"
+                  class="storage-navbar__dropdown-link"
+                  >Enterprise Storage</a
+                >
+                <a
+                  href="/platinum-storage"
+                  class="storage-navbar__dropdown-link"
+                  >Platinum Class Storage</a
+                >
+                <a href="/bonded-storage" class="storage-navbar__dropdown-link"
+                  >Bonded Warehouses</a
+                >
+              </div>
+            </div>
+          </div>
+          <a href="#" class="storage-navbar__menu-item">Size Guide & Pricing</a>
+          <a href="/about-us" class="storage-navbar__menu-item">About us</a>
+          <a href="/news" class="storage-navbar__menu-item">News</a>
+        </div>
+
+        <a href="#" class="storage-navbar__contact-btn">Contact Us</a>
+
+        <!-- Mobile Toggle Button -->
+        <div class="storage-navbar__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="storage-mobile-menu">
+      <div class="storage-mobile-menu__container">
+        <div class="storage-mobile-menu__item storage-mobile-menu__dropdown">
+          <span>Storage Types</span>
+          <svg
+            class="storage-mobile-menu__dropdown-icon"
+            width="10"
+            height="6"
+            viewBox="0 0 10 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L5 5L9 1"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <!-- Mobile Dropdown Content -->
+          <div class="storage-mobile-menu__dropdown-content">
+            <a href="/self-storage" class="storage-mobile-menu__dropdown-link"
+              >Self Storage</a
+            >
+            <a
+              href="/corporate-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Corporate Storage</a
+            >
+            <a
+              href="/business-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Business Storage</a
+            >
+            <a
+              href="/warehouse-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Warehousing</a
+            >
+            <a href="/3pl-storage" class="storage-mobile-menu__dropdown-link"
+              >3PL Storage</a
+            >
+            <a
+              href="/vehicle-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Vehicle Storage</a
+            >
+            <a
+              href="/enterprise-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Enterprise Storage</a
+            >
+            <a
+              href="/platinum-storage"
+              class="storage-mobile-menu__dropdown-link"
+              >Platinum Class Storage</a
+            >
+            <a href="/bonded-storage" class="storage-mobile-menu__dropdown-link"
+              >Bonded Warehouses</a
+            >
+          </div>
+        </div>
+        <a href="#" class="storage-mobile-menu__item">Size Guide & Pricing</a>
+        <a href="/about-us" class="storage-mobile-menu__item">About us</a>
+        <a href="/news" class="storage-mobile-menu__item">News</a>
+        <a
+          href="#"
+          class="storage-mobile-menu__item storage-mobile-menu__contact"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+
+    <script src="/static/js/Script.js"></script>
+  </body>
+</html>
